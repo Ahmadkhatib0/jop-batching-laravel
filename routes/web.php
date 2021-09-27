@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,5 +16,4 @@ Route::get('/about', function () {
 Route::get('/upload', function () {
     return view("upload-file");
 });
-Route::post('/upload', function () {
-});
+Route::post('/upload', [SalesController::class, 'store']);
