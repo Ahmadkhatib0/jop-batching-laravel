@@ -9,12 +9,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', function () {
-    return "about page";
-});
-
-Route::get('/upload', function () {
-    return view("upload-file");
-});
+Route::get('/upload-file', [SalesController::class, 'index']);
 Route::post('/upload', [SalesController::class, 'store']);
-Route::get('/store-data', [SalesController::class, 'create']);
