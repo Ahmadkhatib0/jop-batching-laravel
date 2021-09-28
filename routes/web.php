@@ -11,3 +11,4 @@ Route::get('/', function () {
 
 Route::get('/upload-file', [SalesController::class, 'index']);
 Route::post('/upload', [SalesController::class, 'store']);
+Route::get('/batch', [SalesController::class, 'batch']);
